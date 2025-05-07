@@ -21,5 +21,12 @@ services:
       PACT_BROKER_DATABASE_NAME: postgres
       PACT_BROKER_LOG_LEVEL: INFO
       PACT_BROKER_DATABASE_CONNECT_MAX_RETRIES: "10"
+      PACT_BROKER_ERROR_ON_UNKNOWN_OPTION: true
+      PACT_DO_NOT_TRACK: true
+      # you vsn only use the PACT_BROKER_TOKEN option if you're using pactflow, not this docker image
+      # (https://docs.pact.io/pact_broker/client_cli/readme#usage---cli)
+      PACT_BROKER_USERNAME: hello
+      PACT_BROKER_PASSWORD: world
+
     ports:
       - "92:80"

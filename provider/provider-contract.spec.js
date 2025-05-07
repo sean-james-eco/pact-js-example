@@ -1,7 +1,7 @@
 const { Verifier } = require('@pact-foundation/pact');
 const { importData, movies, server } = require('./provider')
 
-const port = '3001';
+const port = '3002';
 const app = server.listen(port, () => console.log(`Listening on port ${port}...`));
 
 importData();
@@ -9,7 +9,8 @@ importData();
 const options = {
   provider: 'MoviesAPI',
   providerBaseUrl: `http://localhost:${port}`,
-  pactBrokerToken: process.env.PACT_BROKER_TOKEN,
+  pactBrokerUsername: process.env.PACT_BROKER_USERNAME,
+  pactBrokerPassword: process.env.PACT_BROKER_PASSWORD,
   providerVersion: process.env.GITHUB_SHA,
   providerVersionBranch: process.env.GITHUB_BRANCH,
   publishVerificationResult: true,

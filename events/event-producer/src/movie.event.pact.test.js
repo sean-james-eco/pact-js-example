@@ -22,7 +22,8 @@ describe('Event producer tests', () => {
       { deployedOrReleased: true }
     ],
     pactBrokerUrl: process.env.PACT_BROKER_BASE_URL,
-    pactBrokerToken: process.env.PACT_BROKER_TOKEN,
+    pactBrokerUsername: process.env.PACT_BROKER_USERNAME,
+    pactBrokerPassword: process.env.PACT_BROKER_PASSWORD,
     pactUrls: [process.env.PACT_BROKER_BASE_URL],
     publishVerificationResult: true,
   });
