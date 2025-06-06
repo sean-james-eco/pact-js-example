@@ -6,7 +6,7 @@
   "scripts": {
     "start:provider": "cross-env PORT=3001 node provider/provider-service.js",
     "test:web:consumer": "jest consumer-web/consumer-web.spec.js",
-    "publish:pact": "pact-broker publish ./pacts --consumer-app-version=$GIT_COMMIT_SHA --tag=main --broker-base-url=$PACT_BROKER_URL --broker-token=$PACT_API_TOKEN",
+    "publish:pact": "pact-broker publish ./pacts --consumer-app-version=$GIT_COMMIT_SHA --tag=$GIT_BRANCH --broker-base-url=$PACT_BROKER_URL --broker-token=$PACT_API_TOKEN",
     "test:provider": "jest provider/provider-contract.spec.js --testTimeout=5000"
   },
   "author": "",

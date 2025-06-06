@@ -10,7 +10,7 @@ const provider = new PactV3({
 })
 
 const EXPECTED_BODY = {
-    id: '1',
+    id: 1,
     name: 'My movie',
     year: 1999
 }

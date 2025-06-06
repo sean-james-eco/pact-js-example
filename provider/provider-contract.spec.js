@@ -14,7 +14,7 @@ const verifier = new Verifier({
     pactBrokerToken: process.env.PACT_API_TOKEN,
     providerVersion: process.env.GIT_COMMIT_SHA || 'unknown',
     publishVerificationResult: true,
-    consumerVersionTags: ['main'],
+    consumerVersionTags: [ process.env.GIT_BRANCH || 'unknown' ],
 })
 
 // verify contract
