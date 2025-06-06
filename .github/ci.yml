@@ -1,6 +1,8 @@
 name: Pact Tests and Publish
 
-on: push
+on:
+  - push
+  - workflow_dispatch
 
 jobs:
   pact-tests:
